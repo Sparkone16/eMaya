@@ -1,8 +1,8 @@
  
-    import '../repositories/repositories.dart';
+    import '../repositories/categorie_repository.dart';
 
     class GetCategorieUseCase {
-        final CategorieRepository repository;
+        final CategorieRepositoryFake repository;
       
         GetCategorieUseCase({required this.repository});
       

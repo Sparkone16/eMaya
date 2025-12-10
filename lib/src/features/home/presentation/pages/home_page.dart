@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
         const ProduitPage(),
 
         /// page liste des catégories
-        const CategoriePage(),
+        const CategoriesPage(),
 
         /// page contenu du panier
         const PanierPage(),

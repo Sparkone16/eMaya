@@ -10,9 +10,13 @@ class AppTheme {
     scaffoldBackgroundColor: AppColor.lightBackGroundColor,
     primaryColor: AppColor.lightPrimaryColor,
     textTheme: TextTheme(
-      labelSmall: TextStyle(color: AppColor.black),
-      labelMedium: TextStyle(color: AppColor.black),
-      labelLarge: TextStyle(color: AppColor.black),
+      labelSmall: TextStyle(color: AppColor.black, fontSize: 14),
+      labelMedium: TextStyle(color: AppColor.black, fontSize: 18),
+      labelLarge: TextStyle(color: AppColor.black, fontSize: 20),
+    ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColor.lightBackGroundColor,
+      titleTextStyle: TextStyle(color: AppColor.black, fontSize: 24),
     ),
     cardColor: AppColor.lightCardColor,
     canvasColor: AppColor.lightCanvasColor,
@@ -34,9 +38,13 @@ class AppTheme {
     scaffoldBackgroundColor: AppColor.darkBackGroundColor,
     primaryColor: AppColor.darkPrimaryColor,
     textTheme: TextTheme(
-      labelSmall: TextStyle(color: AppColor.white),
-      labelMedium: TextStyle(color: AppColor.white),
-      labelLarge: TextStyle(color: AppColor.white),
+      labelSmall: TextStyle(color: AppColor.white, fontSize: 14),
+      labelMedium: TextStyle(color: AppColor.white, fontSize: 18),
+      labelLarge: TextStyle(color: AppColor.white, fontSize: 20),
+    ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColor.darkBackGroundColor,
+      titleTextStyle: TextStyle(color: AppColor.white, fontSize: 24),
     ),
     colorScheme: ThemeData().colorScheme.copyWith(
           secondary: const Color.fromARGB(255, 136, 145, 193),
