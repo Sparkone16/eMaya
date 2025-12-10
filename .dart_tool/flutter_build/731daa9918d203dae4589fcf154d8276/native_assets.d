@@ -1,0 +1,1 @@
+ C:\\wamp64\\www\\emaya\\.dart_tool\\flutter_build\\731daa9918d203dae4589fcf154d8276\\native_assets.yaml: 

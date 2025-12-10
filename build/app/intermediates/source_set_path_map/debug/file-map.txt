@@ -1,0 +1,13 @@
+com.example.emaya.app-core-1.6.0-0 C:\Users\SIO2\.gradle\caches\transforms-3\8364284b15cc3aa35821b6c5a77e697a\transformed\core-1.6.0\res
+com.example.emaya.app-jetified-window-1.0.0-beta04-1 C:\Users\SIO2\.gradle\caches\transforms-3\b8340950c0825150c652a5f4d3b70d29\transformed\jetified-window-1.0.0-beta04\res
+com.example.emaya.app-jetified-window-java-1.0.0-beta04-2 C:\Users\SIO2\.gradle\caches\transforms-3\c4f39a77bce694f25ac4ae2af2f8ed1d\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.emaya.app-jetified-annotation-experimental-1.1.0-3 C:\Users\SIO2\.gradle\caches\transforms-3\fcaf240359ad3b3ba8749e6ee41d465b\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.emaya.app-debug-4 C:\wamp64\www\emaya\android\app\src\debug\res
+com.example.emaya.app-main-5 C:\wamp64\www\emaya\android\app\src\main\res
+com.example.emaya.app-pngs-6 C:\wamp64\www\emaya\build\app\generated\res\pngs\debug
+com.example.emaya.app-resValues-7 C:\wamp64\www\emaya\build\app\generated\res\resValues\debug
+com.example.emaya.app-rs-8 C:\wamp64\www\emaya\build\app\generated\res\rs\debug
+com.example.emaya.app-mergeDebugResources-9 C:\wamp64\www\emaya\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.emaya.app-mergeDebugResources-10 C:\wamp64\www\emaya\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.emaya.app-merged_res-11 C:\wamp64\www\emaya\build\app\intermediates\merged_res\debug
+com.example.emaya.app-packaged_res-12 C:\wamp64\www\emaya\build\shared_preferences_android\intermediates\packaged_res\debug
