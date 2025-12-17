@@ -1,10 +1,10 @@
 
-    import '../sources/sources.dart';
+    import '../sources/categorie_api.dart';
     import '../../domain/repositories/categorie_repository.dart';
     
     class CategorieRepositoryImp implements CategorieRepositoryFake{
 
-        final CategorieRemoteDataSource remoteDataSource;
+        final CategorieApi remoteDataSource;
         CategorieRepositoryImp({required this.remoteDataSource});
       
         // ... example ...
