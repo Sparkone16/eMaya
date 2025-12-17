@@ -10,6 +10,7 @@ dependencies:
   adaptive_theme: ^3.6.0
   flutter:
     sdk: flutter
+  http: ^1.2.0
 
 dev_dependencies:
   flutter_test:
