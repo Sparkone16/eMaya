@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:emaya/src/features/categorie/presentation/pages/categories_page.dart';
 import 'package:emaya/src/features/panier/presentation/pages/panier_page.dart';
-import 'package:emaya/src/features/produit/presentation/pages/produit_page.dart';
+import 'package:emaya/src/features/produit/presentation/pages/produit_ventes_page.dart';
 import 'package:emaya/src/features/user/presentation/pages/user_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
 
       body: <Widget>[
         /// page produit
-        const ProduitPage(),
+        const ProduitVentePage(),
 
         /// page liste des catégories
         const CategoriesPage(),

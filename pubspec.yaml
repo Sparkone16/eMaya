@@ -8,8 +8,10 @@ environment:
 
 dependencies:
   adaptive_theme: ^3.6.0
+  card_swiper: ^3.0.1
   flutter:
     sdk: flutter
+  http: ^1.2.0
 
 dev_dependencies:
   flutter_test:

@@ -1,60 +1,59 @@
-import 'package:emaya/src/features/categorie/domain/repositories/categorie_repository.dart';
+import 'package:emaya/src/features/categorie/data/models/categorie.dart';
+import 'package:emaya/src/features/categorie/domain/service/categorie_service.dart';
+import 'package:emaya/src/features/categorie/presentation/widgets/categorie_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:emaya/src/core/constants/colors.dart';
 
-class CategoriesPage extends StatelessWidget {
+class CategoriesPage extends StatefulWidget {
   const CategoriesPage({super.key});
 
   @override
+  State<CategoriesPage> createState() => _CategoriesPageState();
+}
+
+class _CategoriesPageState extends State<CategoriesPage> {
+  List<Categorie>? lesCategories;
+  bool isLoaded = false;
+
+  @override
+  void initState() {
+    super.initState();
+    loadCategories();
+  }
+
+  Future<void> loadCategories() async {
+    final categorieService = CategorieService();
+    lesCategories = await categorieService.getAllCategories();
+    setState(() {
+      isLoaded = true;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Categorie'),
+        title: const Text('Catégories'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: GridView.builder(
-          itemCount: 8,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-          itemBuilder: (_, int index) {
-            return InkWell(
-              onTap: () {},
-              onLongPress: () {},
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: AppColor.darkCardColor,
-                    width: 2,
+      body: isLoaded && lesCategories != null
+          ? SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+                child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 8,
+                    crossAxisSpacing: 8,
+                    childAspectRatio: 300 / 250,
                   ),
-                  borderRadius: BorderRadius.circular(12),
-                  
-                ),
-                margin: const EdgeInsets.all(4),
-                child: Column(
-                  children: [
-                    Container(
-                      height: screenWidth * 0.3,
-                      width: screenWidth * 0.3,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('assets/images/cat/${CategorieRepositoryFake.getCategorie(index).getImageNom()}'),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      CategorieRepositoryFake.getCategorie(index).getLibelle(),
-                      style: Theme.of(context).textTheme.labelSmall,
-
-                    ),
-                  ],
+                  itemCount: lesCategories!.length,
+                  itemBuilder: (_, int index) =>
+                      CategorieWidget(categorie: lesCategories![index], indCategorie: index),
                 ),
               ),
-            );
-          }
-        ),
-      ),
+            )
+          : const Center(child: CircularProgressIndicator()),
     );
+
   }
 }
